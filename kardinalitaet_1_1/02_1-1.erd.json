@@ -10,7 +10,7 @@
     "show": 511,
     "database": 4,
     "databaseName": "",
-    "canvasType": "ERD",
+    "canvasType": "@dineug/erd-editor/builtin-schema-sql",
     "language": 1,
     "tableNameCase": 4,
     "columnNameCase": 2,
@@ -75,7 +75,7 @@
       "It7lkETklPRZNN9cxi_Nf": {
         "id": "It7lkETklPRZNN9cxi_Nf",
         "name": "servants",
-        "comment": "Tabeller der Servant",
+        "comment": "Tabeller der Servants",
         "columnIds": [
           "b4EUahDdZNjtE7bBYLLt9",
           "UnxbSCzaeAfJ_l5sRZHUA",
@@ -93,11 +93,11 @@
           "y": 382.911,
           "zIndex": 40,
           "widthName": 60,
-          "widthComment": 106,
+          "widthComment": 111,
           "color": ""
         },
         "meta": {
-          "updateAt": 1773307243647,
+          "updateAt": 1773307467927,
           "createAt": 1773303686896
         }
       }
@@ -130,7 +130,7 @@
         "comment": "",
         "dataType": "VARCHAR(45)",
         "default": "",
-        "options": 0,
+        "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
@@ -139,7 +139,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1773303726480,
+          "updateAt": 1773307701748,
           "createAt": 1773303559927
         }
       },
@@ -150,7 +150,7 @@
         "comment": "",
         "dataType": "VARCHAR(45)",
         "default": "",
-        "options": 0,
+        "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
@@ -159,7 +159,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1773303719577,
+          "updateAt": 1773307702755,
           "createAt": 1773303560431
         }
       },
