@@ -42,10 +42,10 @@ CREATE TABLE design.servants
 
 # Fremdschlüssel: DT
 ALTER TABLE design.servants
-  ADD CONSTRAINT FK_cats_TO_servants -- sprechender Name für die FK-Constraint
+  ADD CONSTRAINT fk_servants_cats_id -- sprechender Name für die FK-Constraint Best Practice
       FOREIGN KEY (cats_id)
       REFERENCES cats (id),
-  ADD CONSTRAINT UQ_servant_cats_id    -- erzwingt 1:1 Beziehung 
+  ADD CONSTRAINT uq_servants_cats_id    -- erzwingt 1:1 Beziehung 
       UNIQUE (cats_id);
 
 # Struktur: DT
