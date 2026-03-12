@@ -6,6 +6,8 @@ DROP TABLE IF EXISTS design.products;
 DROP TABLE IF EXISTS design.servants;
 DROP TABLE IF EXISTS design.cats;
 
+# Struktur: CREATE - DESCRIBE - INSERT - SELECT
+
 # Mastertabelle (MT): unverändert
 CREATE TABLE design.cats
 (
@@ -18,7 +20,7 @@ CREATE TABLE design.cats
 # Struktur: MT
 DESCRIBE design.cats;
 
--- Inserts: MT 
+#Inserts: MT 
 INSERT INTO design.cats (id, cat_name,fur_color) VALUES 
 (DEFAULT, "Grizabella", "white"),
 (DEFAULT, "Alonzo", "grey"),
@@ -28,7 +30,7 @@ INSERT INTO design.cats (id, cat_name,fur_color) VALUES
 # Inhalte: MT
 SELECT * FROM design.cats;
 
-# DT Verbindung zur MT über Fremdschlüssel
+# Detailtabelle (DT) Verbindung zur MT über Fremdschlüssel
 CREATE TABLE design.servants
 (
   id           INT         NOT NULL AUTO_INCREMENT,
@@ -44,19 +46,18 @@ ALTER TABLE design.servants
     FOREIGN KEY (cats_id)
     REFERENCES cats (id);
 
+# Struktur: DT
+DESCRIBE design.servants;
+
 # Inserts: DT
 INSERT INTO design.servants (id, servant_name, yrs_served, cats_id) VALUES
 (DEFAULT, 'Wolfgang Amadeus', 5, 1), -- Diener für Grizabella
 (DEFAULT, 'Maria Callas', 2, 2),  -- Diener für Alonzo
 (DEFAULT, 'Felix Mendelssohn', 10, 3); -- Diener für Mausi
 
-# Struktur: DT
-DESCRIBE design.servants;
-
 # Inhalte: DT
 SELECT * FROM design.servants;
-
-
+ # Struktur: CREATE DESCRIBE INSERT SELECT
 
 
 
