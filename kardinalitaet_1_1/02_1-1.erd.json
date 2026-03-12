@@ -4,8 +4,8 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": -5,
-    "scrollLeft": 0,
+    "scrollTop": -51,
+    "scrollLeft": -106,
     "zoomLevel": 1,
     "show": 511,
     "database": 4,
@@ -36,7 +36,9 @@
     ],
     "relationshipIds": [],
     "indexIds": [],
-    "memoIds": []
+    "memoIds": [
+      "oX6DBFpZslpzdnh0yrial"
+    ]
   },
   "collections": {
     "tableEntities": {
@@ -70,7 +72,7 @@
       "It7lkETklPRZNN9cxi_Nf": {
         "id": "It7lkETklPRZNN9cxi_Nf",
         "name": "servants",
-        "comment": "",
+        "comment": "Tabeller der Servant",
         "columnIds": [
           "b4EUahDdZNjtE7bBYLLt9",
           "UnxbSCzaeAfJ_l5sRZHUA",
@@ -86,11 +88,11 @@
           "y": 543.911,
           "zIndex": 40,
           "widthName": 60,
-          "widthComment": 60,
+          "widthComment": 106,
           "color": ""
         },
         "meta": {
-          "updateAt": 1773303825875,
+          "updateAt": 1773303870185,
           "createAt": 1773303686896
         }
       }
@@ -220,6 +222,23 @@
     "relationshipEntities": {},
     "indexEntities": {},
     "indexColumnEntities": {},
-    "memoEntities": {}
+    "memoEntities": {
+      "oX6DBFpZslpzdnh0yrial": {
+        "id": "oX6DBFpZslpzdnh0yrial",
+        "value": "cats ist die Mastertabelle",
+        "ui": {
+          "x": 160,
+          "y": 246,
+          "zIndex": 100,
+          "width": 116,
+          "height": 100,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1773304148984,
+          "createAt": 1773304123303
+        }
+      }
+    }
   }
 }
