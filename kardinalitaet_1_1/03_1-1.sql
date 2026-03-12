@@ -59,11 +59,3 @@ INSERT INTO design.servants (id, servant_name, yrs_served, cats_id) VALUES
 
 # Inhalte: DT
 SELECT * FROM design.servants;
- # Struktur: CREATE DESCRIBE INSERT SELECT
-
-
-
-
-
-
-
