@@ -4,8 +4,8 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": -207,
-    "scrollLeft": -117,
+    "scrollTop": -213,
+    "scrollLeft": -318,
     "zoomLevel": 1,
     "show": 511,
     "database": 4,
@@ -230,7 +230,7 @@
         "comment": "",
         "dataType": "INT",
         "default": "",
-        "options": 8,
+        "options": 12,
         "ui": {
           "keys": 2,
           "widthName": 60,
@@ -239,7 +239,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1773307231949,
+          "updateAt": 1773313427567,
           "createAt": 1773307201422
         }
       }
