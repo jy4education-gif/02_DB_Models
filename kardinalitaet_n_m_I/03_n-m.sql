@@ -29,7 +29,6 @@ SELECT * FROM design.servants;
 
 
 /*  PRODUCTS */
-
 -- Products: ohne Fremdschlüssel
 CREATE TABLE design.products
 (
@@ -38,7 +37,6 @@ CREATE TABLE design.products
   product_price DECIMAL(4,2) NOT NULL,
   PRIMARY KEY (id)
 );
-
 
 -- Products: Struktur
 DESCRIBE design.products;
@@ -49,7 +47,6 @@ INSERT INTO design.products (product_name, product_price) VALUES
 ('Kratzbaum "Sky"', 45.99),
 ('Baldrian-Kissen', 2.95),
 ('Goldfisch-Snack', 1.20);
-
 
 -- Products: Inhalte 
 SELECT * FROM design.products;
@@ -64,9 +61,11 @@ CREATE TABLE design.purchases
   PRIMARY KEY (id)
 ) COMMENT 'Mapping Tabelle für n:m Beziehung';
 
+-- Purchases: Struktur
+DESCRIBE design.purchases;
+
 /*  PURCHASES (Kaufprozesse)*/
 -- Purchases: Inserts (Kaufprozesse : Käufer - Produkt)
--- Hier verknüpfen wir die IDs (Max kauft Lachs, Maria kauft Kratzbaum etc.)
 INSERT INTO design.purchases (id_servant, id_product) VALUES 
 (1, 1), -- Max kauft Lachs
 (1, 3), -- Max kauft Baldrian
@@ -74,8 +73,7 @@ INSERT INTO design.purchases (id_servant, id_product) VALUES
 (3, 2), -- Maria kauft Kratzbaum
 (3, 4); -- Maria kauft Goldfisch
 
--- Purchases: Inhalte 
--- Einfache Anzeige der Mapping-Tabelle
+-- Purchases: Inhalte, Anzeige der Mapping-Tabelle
 SELECT * FROM design.purchases;
 
 -- BONUS: Wer hat was gekauft? (Der n:m Join)
@@ -85,15 +83,3 @@ SELECT
 FROM design.purchases AS pu
 JOIN design.servants AS s ON pu.id_servant = s.id
 JOIN design.products AS p ON pu.id_product = p.id;
-
-
-
--- Purchases: Struktur
-DESCRIBE design.purchases;
-
--- Purchases: Inserts (Kaufprozesse : Käufer - Produkt)
-
-
-
-
--- Purchases: Inhalte 
