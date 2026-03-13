@@ -42,7 +42,7 @@ CREATE TABLE design.servants
 
 # Fremdschlüssel: DT
 ALTER TABLE design.servants
-  ADD CONSTRAINT fk_servants_cats_id -- sprechender Name für die FK-Constraint Best Practice
+  ADD CONSTRAINT fk_servants_cats_id -- sprechender Name für die FK-Constraint, Best Practice
       FOREIGN KEY (cats_id)
       REFERENCES cats (id),
   ADD CONSTRAINT uq_servants_cats_id    -- erzwingt 1:1 Beziehung 

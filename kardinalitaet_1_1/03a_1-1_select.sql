@@ -1,4 +1,7 @@
 \! cls
+-- Konvertiert die Tabelle und alle darin enthaltenen Textspalten
+ALTER TABLE design.cats CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE design.servants CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Einzeltabellen
 SELECT * FROM design.cats;
@@ -18,14 +21,14 @@ ON design.cats.id = design.servants.cats_id;
 -- Inner Join 2 / (Wer dient wem?)
 -- Wer dient Grizabella?
 -- Wem dient X?
-SELECT servant_name FROM design.servants
+SELECT servant_name AS Diener FROM design.servants
 JOIN design.cats ON design.cats.id = design.servants.cats_id
 WHERE cat_name = 'Grizabella';
 
 -- Inner Join 2a / (Wer dient wem?)
 -- 'X ist der Diener von Y'  / Dienstverhältnis
 SELECT CONCAT(design.servants.servant_name, 
-    ' ist der Diener von ', design.cats.cat_name) AS Dienstverhaeltnis
+    ' ist der Diener von ', design.cats.cat_name) AS 'Dienstverhaeltnis'
 FROM design.cats
 JOIN design.servants ON design.cats.id = design.servants.cats_id
 WHERE servant_name = 'Maria Callas';
