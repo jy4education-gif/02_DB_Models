@@ -21,7 +21,7 @@ ON design.cats.id = design.servants.cats_id;
 -- Inner Join 2 / (Wer dient wem?)
 -- Wer dient Grizabella?
 -- Wem dient X?
-SELECT servant_name AS Diener FROM design.servants
+SELECT cat_name AS Katze, servant_name AS Diener FROM design.servants
 JOIN design.cats ON design.cats.id = design.servants.cats_id
 WHERE cat_name = 'Grizabella';
 
@@ -67,8 +67,30 @@ WHERE yrs_served = (SELECT MAX(yrs_served) FROM design.servants);
 -- QUERY / MAX()
 -- SELECT MAX(yrs_served) FROM design.servants;
 
-
-
-
-
 -- 3. VIEW / QUERY / MAX() in VIEW gekapselt
+-- Erst die View erstellen
+DROP VIEW IF EXISTS design.vw_max_service;
+
+CREATE VIEW design.vw_max_service AS 
+    SELECT MAX(yrs_served) AS max_yrs FROM design.servants;
+-- Die View in einer Abfrage nutzen Logik der "längsten Dienstzeit" sauber getrennt
+SELECT 
+    s.servant_name, 
+    c.cat_name, 
+    s.yrs_served
+FROM design.servants AS s
+JOIN design.cats AS c ON s.cats_id = c.id
+WHERE s.yrs_served = (SELECT max_yrs FROM design.vw_max_service);
+
+-- Nested Ansatz - Derived Table / Inline View
+SELECT 
+    s.servant_name, 
+    c.cat_name, 
+    s.yrs_served
+FROM design.servants AS s
+JOIN design.cats AS c ON s.cats_id = c.id
+-- "nested table":
+JOIN (
+    SELECT MAX(yrs_served) AS max_yrs 
+    FROM design.servants
+) AS m ON s.yrs_served = m.max_yrs;
