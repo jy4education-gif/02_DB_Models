@@ -1,0 +1,244 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dineug/erd-editor/main/json-schema/schema.json",
+  "version": "3.0.0",
+  "settings": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -45,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": 511,
+    "database": 4,
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": 1,
+    "tableNameCase": 4,
+    "columnNameCase": 2,
+    "bracketType": 1,
+    "relationshipDataTypeSync": true,
+    "relationshipOptimization": false,
+    "columnOrder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "maxWidthComment": -1,
+    "ignoreSaveSettings": 0
+  },
+  "doc": {
+    "tableIds": [
+      "B8WQJsBMJr2c2FrYCP-76",
+      "v9B2KQBObDIDl2hh_OZR-"
+    ],
+    "relationshipIds": [],
+    "indexIds": [],
+    "memoIds": []
+  },
+  "collections": {
+    "tableEntities": {
+      "B8WQJsBMJr2c2FrYCP-76": {
+        "id": "B8WQJsBMJr2c2FrYCP-76",
+        "name": "design.servants",
+        "comment": "",
+        "columnIds": [
+          "dAOi1WQMX0rpVE_RxbFQl",
+          "ssEFLEyRyzNzJr5mk6jNF",
+          "fldw6ZoW6CGxiPZ1pkr1K"
+        ],
+        "seqColumnIds": [
+          "dAOi1WQMX0rpVE_RxbFQl",
+          "ssEFLEyRyzNzJr5mk6jNF",
+          "fldw6ZoW6CGxiPZ1pkr1K"
+        ],
+        "ui": {
+          "x": 70,
+          "y": 112,
+          "zIndex": 2,
+          "widthName": 83,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1773390558605,
+          "createAt": 1773390272721
+        }
+      },
+      "oXkNTXnKTCGvLTrkChubo": {
+        "id": "oXkNTXnKTCGvLTrkChubo",
+        "name": "",
+        "comment": "",
+        "columnIds": [],
+        "seqColumnIds": [],
+        "ui": {
+          "x": 188,
+          "y": 408,
+          "zIndex": 32,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1773390389605,
+          "createAt": 1773390379116
+        }
+      },
+      "v9B2KQBObDIDl2hh_OZR-": {
+        "id": "v9B2KQBObDIDl2hh_OZR-",
+        "name": "design.products",
+        "comment": "",
+        "columnIds": [
+          "UyhNppGphFhpp8jQih8dB",
+          "kTcgxl9YEdunTiu2_U20M",
+          "kE5f_h6u6UShARK9OM1gy"
+        ],
+        "seqColumnIds": [
+          "UyhNppGphFhpp8jQih8dB",
+          "kTcgxl9YEdunTiu2_U20M",
+          "kE5f_h6u6UShARK9OM1gy"
+        ],
+        "ui": {
+          "x": 68,
+          "y": 269,
+          "zIndex": 33,
+          "widthName": 87,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1773390560606,
+          "createAt": 1773390382516
+        }
+      }
+    },
+    "tableColumnEntities": {
+      "fldw6ZoW6CGxiPZ1pkr1K": {
+        "id": "fldw6ZoW6CGxiPZ1pkr1K",
+        "tableId": "B8WQJsBMJr2c2FrYCP-76",
+        "name": "yrs_served",
+        "comment": "",
+        "dataType": "TINYINT",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1773390309451,
+          "createAt": 1773390283040
+        }
+      },
+      "ssEFLEyRyzNzJr5mk6jNF": {
+        "id": "ssEFLEyRyzNzJr5mk6jNF",
+        "tableId": "B8WQJsBMJr2c2FrYCP-76",
+        "name": "servant_name",
+        "comment": "",
+        "dataType": "VARCHAR(45)",
+        "default": "",
+        "options": 0,
+        "ui": {
+          "keys": 0,
+          "widthName": 75,
+          "widthComment": 60,
+          "widthDataType": 75,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1773390321015,
+          "createAt": 1773390283556
+        }
+      },
+      "dAOi1WQMX0rpVE_RxbFQl": {
+        "id": "dAOi1WQMX0rpVE_RxbFQl",
+        "tableId": "B8WQJsBMJr2c2FrYCP-76",
+        "name": "id",
+        "comment": "",
+        "dataType": "INT",
+        "default": "",
+        "options": 11,
+        "ui": {
+          "keys": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1773390368523,
+          "createAt": 1773390283974
+        }
+      },
+      "UyhNppGphFhpp8jQih8dB": {
+        "id": "UyhNppGphFhpp8jQih8dB",
+        "tableId": "v9B2KQBObDIDl2hh_OZR-",
+        "name": "id",
+        "comment": "",
+        "dataType": "INT",
+        "default": "",
+        "options": 11,
+        "ui": {
+          "keys": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "widthDataType": 60,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1773390418723,
+          "createAt": 1773390396243
+        }
+      },
+      "kTcgxl9YEdunTiu2_U20M": {
+        "id": "kTcgxl9YEdunTiu2_U20M",
+        "tableId": "v9B2KQBObDIDl2hh_OZR-",
+        "name": "product_name",
+        "comment": "",
+        "dataType": "VARCHAR(45)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 78,
+          "widthComment": 60,
+          "widthDataType": 75,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1773390442220,
+          "createAt": 1773390396613
+        }
+      },
+      "kE5f_h6u6UShARK9OM1gy": {
+        "id": "kE5f_h6u6UShARK9OM1gy",
+        "tableId": "v9B2KQBObDIDl2hh_OZR-",
+        "name": "product_price",
+        "comment": "",
+        "dataType": "DECIMAL(4,2)",
+        "default": "",
+        "options": 8,
+        "ui": {
+          "keys": 0,
+          "widthName": 75,
+          "widthComment": 60,
+          "widthDataType": 74,
+          "widthDefault": 60
+        },
+        "meta": {
+          "updateAt": 1773390550140,
+          "createAt": 1773390396910
+        }
+      }
+    },
+    "relationshipEntities": {},
+    "indexEntities": {},
+    "indexColumnEntities": {},
+    "memoEntities": {}
+  }
+}
