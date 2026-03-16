@@ -10,7 +10,7 @@
     "show": 502,
     "database": 1,
     "databaseName": "design",
-    "canvasType": "@dineug/erd-editor/builtin-schema-sql",
+    "canvasType": "ERD",
     "language": 1,
     "tableNameCase": 4,
     "columnNameCase": 2,

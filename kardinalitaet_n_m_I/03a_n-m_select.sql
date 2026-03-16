@@ -1,10 +1,10 @@
 -- 03. SELECTS / Servants, Products, Purchases
-\! cls
+-- \! cls
 
 -- Einzeltabellen
-SELECT * FROM design.servants;
-SELECT * FROM design.products;
-SELECT * FROM design.purchases;
+-- SELECT * FROM design.servants;
+-- SELECT * FROM design.products;
+-- SELECT * FROM design.purchases;
 
 -- Inner Join 1 / Kombi (servants / products / purchases)
 -- SELECT 
@@ -15,6 +15,12 @@ SELECT * FROM design.purchases;
 -- FROM design.purchases AS pu
 -- INNER JOIN design.servants AS s ON pu.id_servant = s.id
 -- INNER JOIN design.products AS p ON pu.id_product = p.id;
+SELECT
+    *
+FROM design.purchases
+INNER JOIN design.servants ON design.servants.id = design.purchases.servants_id
+INNER JOIN design.products ON design.products.id = design.purchases.products_id
+;
 
 
 -- Welche Artikel hat X/Y gekauft?
